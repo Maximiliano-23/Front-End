@@ -10,7 +10,7 @@ import { environment } from 'environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  URL = environment.URL + 'auth/';
+  URL = environment.URL + 'https://backendmaximiliano-pereira.onrender.com/auth/';
 
     constructor(private httpClient: HttpClient) { }
 

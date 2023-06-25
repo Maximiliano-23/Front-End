@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'http://localhost:8080/educacion/';
+  URL = 'https://backendmaximiliano-pereira.onrender.com/educacion/';
   
   constructor(private httpClient : HttpClient) { }
 
@@ -24,7 +24,7 @@ export class EducacionService {
     return this.httpClient.post<any>(this.URL + 'create', educacion);
   }
 
-  public update(id: number, educacion: Educacion): Observable<any>{
+  public update(id: number, educacion: Educacion | undefined): Observable<any>{
     return this.httpClient.put<any>(this.URL + `update/${id}`, educacion);
   }
 
